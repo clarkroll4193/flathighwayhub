@@ -1,3 +1,3 @@
-module byte_counter_462c39
+module byte_counter_e5e2e8
 
 go 1.19
